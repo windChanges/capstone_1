@@ -1,0 +1,5 @@
+.astronav-sticky-header[data-astro-cid-6bfkfnkq] {
+  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  will-change: transform;
+}

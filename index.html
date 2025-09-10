@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Capstone1</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <!-- fontawesome -->
     <link
       rel="stylesheet"
@@ -38,138 +40,113 @@
   </head>
   <body>
     <!--Header-->
-    <header>
-      <nav
-        class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600"
-      >
+    <header
+      class="astronav-sticky-header sticky top-0 border-b z-20 transition-all py-5 border-transparent"
+      data-astro-cid-6bfkfnkq=""
+    >
+      <div class="max-w-screen-xl mx-auto px-5">
         <div
-          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+          class="flex flex-col lg:flex-row justify-between items-center relative z-10"
+          data-astro-transition-scope="astro-o7bz76pi-1"
         >
-          <!-- Logo -->
-          <a
-            href="/"
-            class="text-lg flex items-center transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full px-2 -ml-2"
-            ><span class="font-bold text-indigo-600">Astro</span
-            ><span class="text-slate-600">ship</span>
-            <span
-              class="uppercase mt-0.5 leading-none text-[10px] ml-1 font-bold bg-gray-200 text-slate-700 px-2 py-1 rounded-md"
-              >PRO</span
-            >
-          </a>
-          <!-- Try for Free -->
-          <div
-            class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"
-          >
-            <div class="hidden lg:flex items-center gap-4">
-              <a
-                href="#"
-                class="text-sm px-2 py-1 transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full"
-                >Log in</a
+          <div class="flex w-full lg:w-auto items-center justify-between">
+            <a
+              href="/"
+              class="text-lg flex items-center transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full px-2 -ml-2"
+              ><span class="font-bold text-indigo-600">Astro</span
+              ><span class="text-slate-600">ship</span>
+              <span
+                class="uppercase mt-0.5 leading-none text-[10px] ml-1 font-bold bg-gray-200 text-slate-700 px-2 py-1 rounded-md"
+                >PRO</span
               >
-              <a
-                href="#"
-                class="rounded-full text-center transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo px-4 py-2 text-sm bg-indigo-600 text-white hover:bg-indigo-800 inline-flex items-center group gap-px"
-              >
-                <span>Try for Free</span>
+            </a>
+            <div class="block lg:hidden">
+              <button id="astronav-menu" aria-label="Toggle Menu">
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
                   fill="currentColor"
-                  class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform"
+                  class="w-4 h-4 text-gray-800"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
+                  <title>Toggle Menu</title>
                   <path
+                    class="astronav-close-icon astronav-toggle hidden"
                     fill-rule="evenodd"
-                    d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
                     clip-rule="evenodd"
+                    d="M18.278 16.864a1 1 0 01-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 01-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 011.414-1.414l4.829 4.828 4.828-4.828a1 1 0 111.414 1.414l-4.828 4.829 4.828 4.828z"
+                  ></path>
+                  <path
+                    class="astronav-open-icon astronav-toggle"
+                    fill-rule="evenodd"
+                    d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2z"
                   ></path>
                 </svg>
-              </a>
+              </button>
             </div>
           </div>
-          <!-- nav -->
-          <div
-            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-            id="navbar-sticky"
+          <nav
+            class="astronav-items astronav-toggle w-full lg:w-auto mt-2 lg:flex lg:mt-0 hidden"
           >
-            <ul
-              class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
-            >
-              <li>
-                <!-- Nút dropdown -->
-                <button
-                  id="dropdownNavbarLink"
-                  data-dropdown-toggle="dropdownNavbar"
-                  class="flex items-center gap-1 text-sm w-full lg:w-auto transition lg:px-3 py-2 text-gray-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full"
-                >
-                  Pages
-                  <svg
-                    class="w-2.5 h-2.5 ms-2.5"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 10 6"
+            <ul class="flex flex-col lg:flex-row lg:gap-3">
+              <li class="relative z-50 isolate">
+                <menu class="astronav-dropdown group" aria-expanded="false">
+                  <button
+                    class="flex items-center gap-1 text-sm w-full lg:w-auto transition lg:px-3 py-2 text-gray-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full"
                   >
-                    <path
+                    <span>Pages</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="3"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="m1 1 4 4 4-4"
-                    />
-                  </svg>
-                </button>
-
-                <!-- Menu dropdown -->
-                <div
-                  id="dropdownNavbar"
-                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600"
-                >
-                  <ul
-                    class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                    aria-labelledby="dropdownLargeButton"
+                      class="w-3 h-3 mt-0.5 group-open:rotate-180"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                      ></path>
+                    </svg>
+                  </button>
+                  <div
+                    class="astronav-dropdown dropdown-toggle hidden"
+                    aria-expanded="false"
                   >
-                    <li>
-                      <a
-                        href="#"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                        >Features</a
+                    <div
+                      class="lg:absolute w-full lg:w-48 z-50 border-l lg:border-0 border-slate-200 lg:left-0 origin-top-left"
+                    >
+                      <div
+                        class="px-3 lg:py-2 lg:bg-white lg:rounded-md lg:shadow lg:border flex flex-col"
                       >
-                    </li>
-
-                    <!-- Sub Dropdown -->
-                    <li aria-labelledby="dropdownNavbarLink">
-                      <button
-                        id="doubleDropdownButton"
-                        data-dropdown-toggle="doubleDropdown"
-                        data-dropdown-placement="right-start"
-                        type="button"
-                        class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Integrations
-                      </button>
-                    </li>
-                    <!-- /Sub Dropdown -->
-
-                    <li>
-                      <a
-                        href="#"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Blog Details
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        404 Page
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+                        <a
+                          href="/features"
+                          class="py-1 text-sm text-gray-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded"
+                        >
+                          Features </a
+                        ><a
+                          href="/integrations"
+                          class="py-1 text-sm text-gray-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded"
+                        >
+                          Integrations </a
+                        ><a
+                          href="/blog//typography-example"
+                          class="py-1 text-sm text-gray-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded"
+                        >
+                          Blog Details </a
+                        ><a
+                          href="/404"
+                          class="py-1 text-sm text-gray-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded"
+                        >
+                          404 Page
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </menu>
               </li>
-
               <li>
                 <a
                   href="/pricing"
@@ -203,10 +180,269 @@
                 </a>
               </li>
             </ul>
+            <div class="lg:hidden flex items-center mt-3 gap-4">
+              <a
+                href="#"
+                class="rounded-full text-center transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo w-full px-5 py-2 bg-gray-100 hover:bg-gray-200 border-2 border-transparent"
+                >Log in
+              </a>
+              <a
+                href="#"
+                class="rounded-full text-center transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo w-full px-5 py-2 bg-indigo-600 text-white hover:bg-indigo-800"
+                >Try for Free
+              </a>
+            </div>
+          </nav>
+          <script data-astro-exec="">
+            (function () {
+              const closeOnClick = false;
+
+              ["DOMContentLoaded", "astro:after-swap"].forEach((event) => {
+                document.addEventListener(event, addListeners);
+              });
+
+              // Function to clone and replace elements
+              function cloneAndReplace(element) {
+                const clone = element.cloneNode(true);
+                element.parentNode.replaceChild(clone, element);
+              }
+
+              function addListeners() {
+                // Clean up existing listeners
+                const oldMenuButton = document.getElementById("astronav-menu");
+                if (oldMenuButton) {
+                  cloneAndReplace(oldMenuButton);
+                }
+
+                const oldDropdownMenus =
+                  document.querySelectorAll(".astronav-dropdown");
+                oldDropdownMenus.forEach((menu) => {
+                  cloneAndReplace(menu);
+                });
+
+                // Mobile nav toggle
+                const menuButton = document.getElementById("astronav-menu");
+                menuButton &&
+                  menuButton.addEventListener("click", toggleMobileNav);
+
+                // Dropdown menus
+                const dropdownMenus =
+                  document.querySelectorAll(".astronav-dropdown");
+                dropdownMenus.forEach((menu) => {
+                  const button = menu.querySelector("button");
+                  button &&
+                    button.addEventListener("click", (event) =>
+                      toggleDropdownMenu(event, menu, dropdownMenus)
+                    );
+
+                  // Handle Submenu Dropdowns
+                  const dropDownSubmenus = menu.querySelectorAll(
+                    ".astronav-dropdown-submenu"
+                  );
+
+                  dropDownSubmenus.forEach((submenu) => {
+                    const submenuButton = submenu.querySelector("button");
+                    submenuButton &&
+                      submenuButton.addEventListener("click", (event) => {
+                        event.stopImmediatePropagation();
+                        toggleSubmenuDropdown(event, submenu);
+                      });
+                  });
+                });
+
+                // Clicking away from dropdown will remove the dropdown class
+                document.addEventListener("click", closeAllDropdowns);
+
+                if (closeOnClick) {
+                  handleCloseOnClick();
+                }
+              }
+
+              function toggleMobileNav() {
+                [...document.querySelectorAll(".astronav-toggle")].forEach(
+                  (el) => {
+                    el.classList.toggle("hidden");
+                  }
+                );
+              }
+
+              function toggleDropdownMenu(event, menu, dropdownMenus) {
+                toggleMenu(menu);
+
+                // Close one dropdown when selecting another
+                Array.from(dropdownMenus)
+                  .filter((el) => el !== menu && !menu.contains(el))
+                  .forEach(closeMenu);
+
+                event.stopPropagation();
+              }
+
+              function toggleSubmenuDropdown(event, submenu) {
+                event.stopPropagation();
+                toggleMenu(submenu);
+
+                // Close sibling submenus at the same nesting level
+                const siblingSubmenus = submenu
+                  .closest(".astronav-dropdown")
+                  .querySelectorAll(".astronav-dropdown-submenu");
+                Array.from(siblingSubmenus)
+                  .filter((el) => el !== submenu && !submenu.contains(el))
+                  .forEach(closeMenu);
+              }
+
+              function closeAllDropdowns(event) {
+                const dropdownMenus =
+                  document.querySelectorAll(".dropdown-toggle");
+                const dropdownParent = document.querySelectorAll(
+                  ".astronav-dropdown, .astronav-dropdown-submenu"
+                );
+                const isButtonInsideDropdown = [
+                  ...document.querySelectorAll(
+                    `.astronav-dropdown button, .astronav-dropdown label, .astronav-dropdown input,
+	  .astronav-dropdown-submenu button, .astronav-dropdown-submenu label, .astronav-dropdown-submenu input,
+	  #astronav-menu`
+                  ),
+                ].some((button) => button.contains(event.target));
+                if (!isButtonInsideDropdown) {
+                  dropdownMenus.forEach((d) => {
+                    // console.log("I ran", d);
+                    // if (!d.contains(event.target)) {
+                    d.classList.remove("open");
+                    d.removeAttribute("open");
+                    d.classList.add("hidden");
+                    // }
+                  });
+                  dropdownParent.forEach((d) => {
+                    d.classList.remove("open");
+                    d.removeAttribute("open");
+                    d.setAttribute("aria-expanded", "false");
+                  });
+                }
+              }
+
+              function toggleMenu(menu) {
+                menu.classList.toggle("open");
+                const expanded = menu.getAttribute("aria-expanded") === "true";
+                menu.setAttribute("aria-expanded", expanded ? "false" : "true");
+                menu.hasAttribute("open")
+                  ? menu.removeAttribute("open")
+                  : menu.setAttribute("open", "");
+
+                const dropdownToggle = menu.querySelector(".dropdown-toggle");
+                const dropdownExpanded =
+                  dropdownToggle.getAttribute("aria-expanded");
+                dropdownToggle.classList.toggle("hidden");
+                dropdownToggle.setAttribute(
+                  "aria-expanded",
+                  dropdownExpanded === "true" ? "false" : "true"
+                );
+              }
+
+              function closeMenu(menu) {
+                // console.log("closing", menu);
+                menu.classList.remove("open");
+                menu.removeAttribute("open");
+                menu.setAttribute("aria-expanded", "false");
+                const dropdownToggles =
+                  menu.querySelectorAll(".dropdown-toggle");
+                dropdownToggles.forEach((toggle) => {
+                  toggle.classList.add("hidden");
+                  toggle.setAttribute("aria-expanded", "false");
+                });
+              }
+
+              function handleCloseOnClick() {
+                const navMenuItems = document.querySelector(".astronav-items");
+                const navToggle = document.getElementById("astronav-menu");
+                const navLink =
+                  navMenuItems && navMenuItems.querySelectorAll("a");
+
+                const MenuIcons =
+                  navToggle.querySelectorAll(".astronav-toggle");
+
+                navLink &&
+                  navLink.forEach((item) => {
+                    item.addEventListener("click", () => {
+                      navMenuItems?.classList.add("hidden");
+                      MenuIcons.forEach((el) => {
+                        el.classList.toggle("hidden");
+                      });
+                    });
+                  });
+              }
+            })();
+          </script>
+          <div>
+            <div class="hidden lg:flex items-center gap-4">
+              <a
+                href="#"
+                class="text-sm px-2 py-1 transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full"
+                >Log in</a
+              >
+              <a
+                href="#"
+                class="rounded-full text-center transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo px-4 py-2 text-sm bg-indigo-600 text-white hover:bg-indigo-800 inline-flex items-center group gap-px"
+              >
+                <span>Try for Free</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
-      </nav>
+      </div>
     </header>
+    <script data-astro-rerun="" data-astro-exec="">
+      (function () {
+        const scrollY = 130;
+        const defaultClass = "py-5 border-transparent";
+        const activeClass = "py-2 bg-white/80 border-gray-200 backdrop-blur-lg";
+
+        // @ts-nocheck
+        let lastKnownScrollPosition = 0;
+        let ticking = false;
+
+        const header = document.querySelector(".astronav-sticky-header");
+
+        // Define two different scroll positions
+        const addScrollY = Math.max(scrollY, 100); // Scroll position to add active class
+        const removeScrollY = Math.max(scrollY - 50, 50); // Scroll position to remove active class
+
+        function updateAnimation(scrollPos) {
+          if (scrollPos > addScrollY) {
+            header.classList.remove(...defaultClass.split(" "));
+            header.classList.add("is-active", ...activeClass.split(" "));
+            header.setAttribute("active", "");
+          } else if (scrollPos < removeScrollY) {
+            header.classList.remove("is-active", ...activeClass.split(" "));
+            header.classList.add(...defaultClass.split(" "));
+            header.removeAttribute("active");
+          }
+        }
+
+        window.addEventListener("scroll", function () {
+          lastKnownScrollPosition = window.scrollY;
+          if (!ticking) {
+            window.requestAnimationFrame(function () {
+              updateAnimation(lastKnownScrollPosition);
+              ticking = false;
+            });
+
+            ticking = true;
+          }
+        });
+      })();
+    </script>
     <!-- Second -->
     <div class="overflow-x-clip">
       <div class="max-w-screen-xl mx-auto px-5">
@@ -1237,7 +1473,6 @@
               </div>
             </div>
           </div>
-      
         </div>
         <div
           class="md:motion-safe:animate-marquee hidden md:motion-reduce:hidden md:flex min-w-full shrink-0 items-center gap-10"
@@ -1541,334 +1776,463 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
-     <!-- Everything -->
+    <!-- Everything -->
     <section class="max-w-screen-xl mx-auto px-5">
-        <div class="mt-24">
-            <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">Everything you need to
-                <span class="text-indigo-600">start a website</span>
-            </h2>
-            <p class="text-lg mt-4 text-slate-600">Astro comes batteries included. It takes the best parts of
-                state-of-the-art tools and adds its own
-                innovations.</p>
-        </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-5 mt-16 gap-10">
+      <div class="mt-24">
+        <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+          Everything you need to
+          <span class="text-indigo-600">start a website</span>
+        </h2>
+        <p class="text-lg mt-4 text-slate-600">
+          Astro comes batteries included. It takes the best parts of
+          state-of-the-art tools and adds its own innovations.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-5 mt-16 gap-10">
+        <div
+          class="rounded-2xl p-8 bg-gray-50 transition-all ring-1 ring-gray-200/50 shadow hover:shadow-lg lg:col-span-3"
+        >
+          <div>
             <div
-                class="rounded-2xl p-8 bg-gray-50 transition-all ring-1 ring-gray-200/50 shadow hover:shadow-lg lg:col-span-3">
-                <div>
-                    <div class="overflow-hidden flex items-start justify-center h-auto relative lg:h-80">
-                        <div class="absolute inset-0 bg-gradient-to-t from-gray-50 via-transparent z-10"></div>
-                        <picture>
-                            <img src="./img/2.CV1PrsFe_ZDeQkF.avif" alt="Feature image" loading="lazy" width="1280"
-                                height="800" decoding="async" class="h-full w-full object-contain">
-
-                        </picture>
-                    </div>
-                </div>
-                <div class="mt-2">
-                    <span
-                        class="bg-purple-100 border-purple-200 border text-purple-600 rounded-full text-xs font-medium px-3 py-1 ">Astroship</span>
-                    <h3 class="text-xl lg:text-2xl font-medium mt-2">Responsive Template</h3>
-                    <p class="text-slate-600 mt-2 [text-wrap:balance]"><span>Astroship is a creative and modern mobile
-                            responsive website template that helps you create any
-                            kind of marketing websites or landing pages.</span></p>
-                </div>
+              class="overflow-hidden flex items-start justify-center h-auto relative lg:h-80"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-gray-50 via-transparent z-10"
+              ></div>
+              <picture>
+                <img
+                  src="./img/2.CV1PrsFe_ZDeQkF.avif"
+                  alt="Feature image"
+                  loading="lazy"
+                  width="1280"
+                  height="800"
+                  decoding="async"
+                  class="h-full w-full object-contain"
+                />
+              </picture>
             </div>
-
-
-            <div
-                class="rounded-2xl p-8 bg-gray-50 transition-all ring-1 ring-gray-200/50 shadow hover:shadow-lg lg:col-span-2">
-
-                <div class="overflow-hidden flex items-start justify-center h-auto relative lg:h-80">
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-50 via-transparent z-10"></div>
-                    <picture>
-                        <img src="./img/everyting_right.avif" alt="">
-                    </picture>
-                </div>
-                <div class="mt-2">
-                    <span
-                        class="bg-indigo-100 border-indigo-200 border text-indigo-600 rounded-full text-xs font-medium px-3 py-1 ">Creative</span>
-                    <h3 class="text-xl lg:text-2xl font-medium mt-2"><span>Next Level Template</span></h3>
-                    <p class="text-slate-600 mt-2 [text-wrap:balance]"><span>Astroship is a new kind of website template
-                            that integrates your favorite tools and
-                            workflows.</span></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
-            <div class="rounded-2xl p-8 bg-gray-50 transition-all ring-1 ring-gray-200/50 shadow hover:shadow-lg">
-
-                <div class="overflow-hidden flex items-start justify-center h-auto relative lg:h-60">
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-50 via-transparent z-10"></div>
-                    <picture><img src="./img/3.BeIuxAWP_2dXMaQ.avif" alt=""></picture>
-                </div>
-
-                <div>
-                    <span
-                        class="bg-indigo-100 border-indigo-200 border text-indigo-600 rounded-full text-xs font-medium px-3 py-1 ">Template</span>
-                    <h3 class="text-xl lg:text-2xl font-medium mt-2">Modern Design</h3>
-                    <p class="text-slate-600 mt-2 [text-wrap:balance]">Feeling old? Try this template and be a part of
-                        the modern design.</p>
-                </div>
-            </div>
-
-
-
-
-
-
-            <div class="rounded-2xl p-8 bg-gray-50 transition-all ring-1 ring-gray-200/50 shadow hover:shadow-lg">
-                <div class="overflow-hidden flex items-start justify-center h-auto relative lg:h-60">
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-50 via-transparent z-10"></div>
-                    <picture><img src="./img/4.CV1PrsFe_ZDeQkF.avif" alt=""></picture>
-
-                </div>
-
-                <div class="mt-2">
-                    <span
-                        class="bg-purple-100 border-purple-200 border text-purple-600 rounded-full text-xs font-medium px-3 py-1 ">Product</span>
-                    <h3 class="text-xl lg:text-2xl font-medium mt-2">Highlight Features</h3>
-                    <p class="text-slate-600 mt-2 [text-wrap:balance]">You can highlight your features in a trendy grid
-                        like this one.</p>
-                </div>
-            </div>
-          
-            <div class="rounded-2xl p-8 bg-gray-50 transition-all ring-1 ring-gray-200/50 shadow hover:shadow-lg">
-                <div class="overflow-hidden flex items-start justify-center h-auto relative lg:h-60">
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-50 via-transparent z-10"></div>
-                    <picture><img src="./img/5integrations.eF8c4xAE.svg" alt=""></picture>
-                </div>
-
-                <div>
-                    <span
-                        class="bg-gray-100 border-gray-200 border text-gray-800 rounded-full text-xs font-medium px-3 py-1 ">Webhooks</span>
-                    <h3 class="text-xl lg:text-2xl font-medium mt-2">100+ Integrations</h3>
-                    <p class="text-slate-600 mt-2 [text-wrap:balance]">Astroship can be integrated with hundreds of
-                        tools using Zapier.</p>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
+          </div>
+          <div class="mt-2">
             <span
-                class="bg-purple-100 border-purple-200 border text-purple-600 rounded-full text-xs font-medium px-3 py-1 ">MORE
-                FEATURES</span>
-            <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">We've got you covered</h2>
-            <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">Our template covers all things SAAS.
-                If you don't find what you're looking for, contact us and we'll
-                either help you or steer you in the right direction.</p>
+              class="bg-purple-100 border-purple-200 border text-purple-600 rounded-full text-xs font-medium px-3 py-1"
+              >Astroship</span
+            >
+            <h3 class="text-xl lg:text-2xl font-medium mt-2">
+              Responsive Template
+            </h3>
+            <p class="text-slate-600 mt-2 [text-wrap:balance]">
+              <span
+                >Astroship is a creative and modern mobile responsive website
+                template that helps you create any kind of marketing websites or
+                landing pages.</span
+              >
+            </p>
+          </div>
         </div>
 
-
-
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
-
+        <div
+          class="rounded-2xl p-8 bg-gray-50 transition-all ring-1 ring-gray-200/50 shadow hover:shadow-lg lg:col-span-2"
+        >
+          <div
+            class="overflow-hidden flex items-start justify-center h-auto relative lg:h-80"
+          >
             <div
-                class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
-                <div
-                    class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
-                    <div><i class="fa-regular fa-file"></i></div>
-                </div>
+              class="absolute inset-0 bg-gradient-to-t from-gray-50 via-transparent z-10"
+            ></div>
+            <picture>
+              <img src="./img/everyting_right.avif" alt="" />
+            </picture>
+          </div>
+          <div class="mt-2">
+            <span
+              class="bg-indigo-100 border-indigo-200 border text-indigo-600 rounded-full text-xs font-medium px-3 py-1"
+              >Creative</span
+            >
+            <h3 class="text-xl lg:text-2xl font-medium mt-2">
+              <span>Next Level Template</span>
+            </h3>
+            <p class="text-slate-600 mt-2 [text-wrap:balance]">
+              <span
+                >Astroship is a new kind of website template that integrates
+                your favorite tools and workflows.</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
 
-
-                <div>
-                    <h3 class="font-semibold text-lg">Bring Your Own Framework</h3>
-                    <p class="text-slate-500 mt-2 leading-relaxed">Build your site using React, Svelte, Vue, Preact, web
-                        components, or just plain ol' HTML +
-                        JavaScript.</p>
-                </div>
-
-
-            </div>
-
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
+        <div
+          class="rounded-2xl p-8 bg-gray-50 transition-all ring-1 ring-gray-200/50 shadow hover:shadow-lg"
+        >
+          <div
+            class="overflow-hidden flex items-start justify-center h-auto relative lg:h-60"
+          >
             <div
-                class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
-                <div
-                    class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
-                    <div><i class="fa-solid fa-trophy"></i></div>
-                </div>
+              class="absolute inset-0 bg-gradient-to-t from-gray-50 via-transparent z-10"
+            ></div>
+            <picture><img src="./img/3.BeIuxAWP_2dXMaQ.avif" alt="" /></picture>
+          </div>
 
-
-                <div>
-                    <h3 class="font-semibold text-lg">100% Static HTML, No JS</h3>
-                    <p class="text-slate-500 mt-2 leading-relaxed">Astro renders your entire page to static HTML,
-                        removing all JavaScript from your final build by default.</p>
-                </div>
-
-
-            </div>
-
-            <div
-                class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
-                <div
-                    class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
-                    <div><i class="fa-solid fa-box"></i></div>
-                </div>
-
-
-                <div>
-                    <h3 class="font-semibold text-lg">On-Demand Components</h3>
-                    <p class="text-slate-500 mt-2 leading-relaxed">Need some JS? Astro can automatically hydrate
-                        interactive components when they become visible on the page.</p>
-                </div>
-
-
-            </div>
-
-            <div
-                class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
-                <div
-                    class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
-                    <div><i class="fa-solid fa-boxes-packing"></i></div>
-                </div>
-
-
-                <div>
-                    <h3 class="font-semibold text-lg">Broad Integration</h3>
-                    <p class="text-slate-500 mt-2 leading-relaxed">Astro supports TypeScript, Scoped CSS, CSS Modules,
-                        Sass, Tailwind, Markdown, MDX, and any other npm packages.</p>
-                </div>
-
-
-            </div>
-
-            <div
-                class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
-                <div
-                    class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
-                    <div><i class="fa-solid fa-magnifying-glass"></i></div>
-                </div>
-
-
-                <div>
-                    <h3 class="font-semibold text-lg">SEO Enabled</h3>
-                    <p class="text-slate-500 mt-2 leading-relaxed">Automatic sitemaps, RSS feeds, pagination and
-                        collections take the pain out of SEO and syndication. It just works!</p>
-                </div>
-
-
-            </div>
-
-
-            <div
-                class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
-                <div
-                    class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
-                    <div><i class="fa-solid fa-people-arrows"></i></div>
-                </div>
-
-
-                <div>
-                    <h3 class="font-semibold text-lg">Community</h3>
-                    <p class="text-slate-500 mt-2 leading-relaxed">Astro is an open source project powered by hundreds
-                        of contributors making thousands of individual contributions.</p>
-                </div>
-            </div>
+          <div>
+            <span
+              class="bg-indigo-100 border-indigo-200 border text-indigo-600 rounded-full text-xs font-medium px-3 py-1"
+              >Template</span
+            >
+            <h3 class="text-xl lg:text-2xl font-medium mt-2">Modern Design</h3>
+            <p class="text-slate-600 mt-2 [text-wrap:balance]">
+              Feeling old? Try this template and be a part of the modern design.
+            </p>
+          </div>
         </div>
 
+        <div
+          class="rounded-2xl p-8 bg-gray-50 transition-all ring-1 ring-gray-200/50 shadow hover:shadow-lg"
+        >
+          <div
+            class="overflow-hidden flex items-start justify-center h-auto relative lg:h-60"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-gray-50 via-transparent z-10"
+            ></div>
+            <picture><img src="./img/4.CV1PrsFe_ZDeQkF.avif" alt="" /></picture>
+          </div>
+
+          <div class="mt-2">
+            <span
+              class="bg-purple-100 border-purple-200 border text-purple-600 rounded-full text-xs font-medium px-3 py-1"
+              >Product</span
+            >
+            <h3 class="text-xl lg:text-2xl font-medium mt-2">
+              Highlight Features
+            </h3>
+            <p class="text-slate-600 mt-2 [text-wrap:balance]">
+              You can highlight your features in a trendy grid like this one.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="rounded-2xl p-8 bg-gray-50 transition-all ring-1 ring-gray-200/50 shadow hover:shadow-lg"
+        >
+          <div
+            class="overflow-hidden flex items-start justify-center h-auto relative lg:h-60"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-gray-50 via-transparent z-10"
+            ></div>
+            <picture
+              ><img src="./img/5integrations.eF8c4xAE.svg" alt=""
+            /></picture>
+          </div>
+
+          <div>
+            <span
+              class="bg-gray-100 border-gray-200 border text-gray-800 rounded-full text-xs font-medium px-3 py-1"
+              >Webhooks</span
+            >
+            <h3 class="text-xl lg:text-2xl font-medium mt-2">
+              100+ Integrations
+            </h3>
+            <p class="text-slate-600 mt-2 [text-wrap:balance]">
+              Astroship can be integrated with hundreds of tools using Zapier.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center"
+      >
+        <span
+          class="bg-purple-100 border-purple-200 border text-purple-600 rounded-full text-xs font-medium px-3 py-1"
+          >MORE FEATURES</span
+        >
+        <h2
+          class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center"
+        >
+          We've got you covered
+        </h2>
+        <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+          Our template covers all things SAAS. If you don't find what you're
+          looking for, contact us and we'll either help you or steer you in the
+          right direction.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+        <div
+          class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5"
+        >
+          <div
+            class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0"
+          >
+            <div><i class="fa-regular fa-file"></i></div>
+          </div>
+
+          <div>
+            <h3 class="font-semibold text-lg">Bring Your Own Framework</h3>
+            <p class="text-slate-500 mt-2 leading-relaxed">
+              Build your site using React, Svelte, Vue, Preact, web components,
+              or just plain ol' HTML + JavaScript.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5"
+        >
+          <div
+            class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0"
+          >
+            <div><i class="fa-solid fa-trophy"></i></div>
+          </div>
+
+          <div>
+            <h3 class="font-semibold text-lg">100% Static HTML, No JS</h3>
+            <p class="text-slate-500 mt-2 leading-relaxed">
+              Astro renders your entire page to static HTML, removing all
+              JavaScript from your final build by default.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5"
+        >
+          <div
+            class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0"
+          >
+            <div><i class="fa-solid fa-box"></i></div>
+          </div>
+
+          <div>
+            <h3 class="font-semibold text-lg">On-Demand Components</h3>
+            <p class="text-slate-500 mt-2 leading-relaxed">
+              Need some JS? Astro can automatically hydrate interactive
+              components when they become visible on the page.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5"
+        >
+          <div
+            class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0"
+          >
+            <div><i class="fa-solid fa-boxes-packing"></i></div>
+          </div>
+
+          <div>
+            <h3 class="font-semibold text-lg">Broad Integration</h3>
+            <p class="text-slate-500 mt-2 leading-relaxed">
+              Astro supports TypeScript, Scoped CSS, CSS Modules, Sass,
+              Tailwind, Markdown, MDX, and any other npm packages.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5"
+        >
+          <div
+            class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0"
+          >
+            <div><i class="fa-solid fa-magnifying-glass"></i></div>
+          </div>
+
+          <div>
+            <h3 class="font-semibold text-lg">SEO Enabled</h3>
+            <p class="text-slate-500 mt-2 leading-relaxed">
+              Automatic sitemaps, RSS feeds, pagination and collections take the
+              pain out of SEO and syndication. It just works!
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5"
+        >
+          <div
+            class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0"
+          >
+            <div><i class="fa-solid fa-people-arrows"></i></div>
+          </div>
+
+          <div>
+            <h3 class="font-semibold text-lg">Community</h3>
+            <p class="text-slate-500 mt-2 leading-relaxed">
+              Astro is an open source project powered by hundreds of
+              contributors making thousands of individual contributions.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
     <div
-        class="bg-gradient-to-bl from-indigo-900 to-indigo-700 p-8 md:px-20 md:py-20 mt-20 flex flex-col items-center text-center">
-        <h2 class="text-white text-4xl md:text-6xl tracking-tight">Build faster websites.</h2>
-        <p class="text-white/70 mt-4 text-lg md:text-xl">Pull content from anywhere and serve it fast with Astro's
-            next-gen island architecture.</p>
-        <div class="flex mt-5">
-            <a href="#"
-                class="rounded-full text-center transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo px-7 py-2.5 bg-white text-indigo-800 border-2 border-transparent">Sign
-                up for a 14-day Trial</a>
-        </div>
-
+      class="bg-gradient-to-bl from-indigo-900 to-indigo-700 p-8 md:px-20 md:py-20 mt-20 flex flex-col items-center text-center"
+    >
+      <h2 class="text-white text-4xl md:text-6xl tracking-tight">
+        Build faster websites.
+      </h2>
+      <p class="text-white/70 mt-4 text-lg md:text-xl">
+        Pull content from anywhere and serve it fast with Astro's next-gen
+        island architecture.
+      </p>
+      <div class="flex mt-5">
+        <a
+          href="#"
+          class="rounded-full text-center transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo px-7 py-2.5 bg-white text-indigo-800 border-2 border-transparent"
+          >Sign up for a 14-day Trial</a
+        >
+      </div>
     </div>
 
     <footer class="py-14 bg-slate-100 border-t border-slate-100">
+      <div class="max-w-screen-xl mx-auto px-5">
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          <div class="sm:col-span-2 md:col-span-3 lg:col-span-2">
+            <a href="#" class="text-lg flex items-center">
+              <span class="font-bold text-indigo-600">Astro</span>
+              <span class="text-slate-600">ship</span>
+              <span
+                class="uppercase mt-0.5 leading-none text-[10px] ml-1 font-bold bg-gray-200 text-slate-700 px-2 py-1 rounded-md"
+                >pro</span
+              >
+            </a>
 
+            <p class="mt-4 text-sm text-slate-700 max-w-xs">
+              Astroship Pro is a premium astro website template made for saas &
+              startups. Built with Astro and Tailwind CSS.
+            </p>
+
+            <div>
+              <a
+                href="https://x.com/surjithctly"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-slate-200 hover:bg-slate-300 rounded w-6 h-6 inline-flex items-center justify-center text-slate-500"
+              >
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-slate-200 hover:bg-slate-300 rounded w-6 h-6 inline-flex items-center justify-center text-slate-500"
+              >
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-slate-200 hover:bg-slate-300 rounded w-6 h-6 inline-flex items-center justify-center text-slate-500"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="font-medium text-sm text-slate-800">Company</h3>
+            <div class="flex flex-col mt-3">
+              <a
+                href="#"
+                class="py-2 text-sm text-slate-600 hover:text-indigo-600"
+                >About</a
+              >
+              <a
+                href="#"
+                class="py-2 text-sm text-slate-600 hover:text-indigo-600"
+                >Careers</a
+              >
+              <a
+                href="#"
+                class="py-2 text-sm text-slate-600 hover:text-indigo-600"
+                >Blog</a
+              >
+              <a
+                href="#"
+                class="py-2 text-sm text-slate-600 hover:text-indigo-600"
+                >Contact</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <h3 class="font-medium text-sm text-slate-800">Product</h3>
+            <div class="flex flex-col mt-3">
+              <a
+                href="#"
+                class="py-2 text-sm text-slate-600 hover:text-indigo-600"
+                >For Startups</a
+              >
+              <a
+                href="#"
+                class="py-2 text-sm text-slate-600 hover:text-indigo-600"
+                >Features</a
+              >
+              <a
+                href="#"
+                class="py-2 text-sm text-slate-600 hover:text-indigo-600"
+                >Pricing</a
+              >
+              <a
+                href="#"
+                class="py-2 text-sm text-slate-600 hover:text-indigo-600"
+                >Integrations</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <h3 class="font-medium text-sm text-slate-800">Resources</h3>
+            <div class="flex flex-col mt-3">
+              <a
+                href="#"
+                class="py-2 text-sm text-slate-600 hover:text-indigo-600"
+                >Help Center</a
+              >
+              <a
+                href="#"
+                class="py-2 text-sm text-slate-600 hover:text-indigo-600"
+                >Guides</a
+              >
+              <a
+                href="#"
+                class="py-2 text-sm text-slate-600 hover:text-indigo-600"
+                >Documentation</a
+              >
+              <a
+                href="#"
+                class="py-2 text-sm text-slate-600 hover:text-indigo-600"
+                >Uptime Status</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-14 pt-8 px-5 border-t border-slate-200">
         <div class="max-w-screen-xl mx-auto px-5">
-            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-                <div class="sm:col-span-2 md:col-span-3 lg:col-span-2">
-                    <a href="#" class="text-lg flex items-center">
-                        <span class="font-bold text-indigo-600">Astro</span>
-                        <span class="text-slate-600">ship</span>
-                        <span
-                            class="uppercase mt-0.5 leading-none text-[10px] ml-1 font-bold bg-gray-200 text-slate-700 px-2 py-1 rounded-md">pro</span>
-                    </a>
-
-                    <p class="mt-4 text-sm text-slate-700 max-w-xs">Astroship Pro is a premium astro website template
-                        made for saas & startups. Built with Astro and
-                        Tailwind CSS.</p>
-
-                    <div>
-                        <a href="https://x.com/surjithctly" target="_blank" rel="noopener noreferrer"
-                            class="bg-slate-200 hover:bg-slate-300 rounded w-6 h-6 inline-flex items-center justify-center text-slate-500">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
-                            class="bg-slate-200 hover:bg-slate-300 rounded w-6 h-6 inline-flex items-center justify-center text-slate-500">
-                            <i class="fa-brands fa-facebook"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"
-                            class="bg-slate-200 hover:bg-slate-300 rounded w-6 h-6 inline-flex items-center justify-center text-slate-500">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </a>
-                    </div>
-                </div>
-
-
-                <div>
-                    <h3 class="font-medium text-sm text-slate-800">Company</h3>
-                    <div class="flex flex-col mt-3">
-                        <a href="#" class="py-2 text-sm text-slate-600 hover:text-indigo-600">About</a>
-                        <a href="#" class="py-2 text-sm text-slate-600 hover:text-indigo-600">Careers</a>
-                        <a href="#" class="py-2 text-sm text-slate-600 hover:text-indigo-600">Blog</a>
-                        <a href="#" class="py-2 text-sm text-slate-600 hover:text-indigo-600">Contact</a>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 class="font-medium text-sm text-slate-800">Product</h3>
-                    <div class="flex flex-col mt-3">
-                        <a href="#" class="py-2 text-sm text-slate-600 hover:text-indigo-600">For Startups</a>
-                        <a href="#" class="py-2 text-sm text-slate-600 hover:text-indigo-600">Features</a>
-                        <a href="#" class="py-2 text-sm text-slate-600 hover:text-indigo-600">Pricing</a>
-                        <a href="#" class="py-2 text-sm text-slate-600 hover:text-indigo-600">Integrations</a>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 class="font-medium text-sm text-slate-800">Resources</h3>
-                    <div class="flex flex-col mt-3">
-                        <a href="#" class="py-2 text-sm text-slate-600 hover:text-indigo-600">Help Center</a>
-                        <a href="#" class="py-2 text-sm text-slate-600 hover:text-indigo-600">Guides</a>
-                        <a href="#" class="py-2 text-sm text-slate-600 hover:text-indigo-600">Documentation</a>
-                        <a href="#" class="py-2 text-sm text-slate-600 hover:text-indigo-600">Uptime Status</a>
-                    </div>
-                </div>
-
-            </div>
+          <p class="text-center text-sm text-slate-600 [text-wrap:balance]">
+            Copyright © 2025 Astroship. All rights reserved.
+          </p>
+          <div class="text-center text-xs text-slate-600 mt-2">
+            <a href="#" class="hover:text-indigo-500">Terms</a>
+            ・
+            <a href="#" class="hover:text-indigo-500">Privacy</a>
+          </div>
         </div>
-
-
-        <div class="mt-14 pt-8 px-5 border-t border-slate-200">
-
-            <div class="max-w-screen-xl mx-auto px-5">
-
-                <p class="text-center text-sm text-slate-600 [text-wrap:balance]">Copyright © 2025 Astroship. All rights
-                    reserved.</p>
-                <div class="text-center text-xs text-slate-600 mt-2">
-                    <a href="#" class="hover:text-indigo-500">Terms</a>
-                    ・
-                    <a href="#" class="hover:text-indigo-500">Privacy</a>
-                </div>
-            </div>
-
-        </div>
-
-
+      </div>
     </footer>
     <!-- Flowbite JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.min.js"></script>
   </body>
 </html>
+
+
