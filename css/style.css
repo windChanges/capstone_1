@@ -3,3 +3,7 @@
   -webkit-transition: all 0.3s ease;
   will-change: transform;
 }
+
+.grid-cols-5{
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
