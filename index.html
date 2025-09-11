@@ -28,7 +28,42 @@
       }
 
       .animate-marquee {
-        animation: marquee 20s linear infinite;
+        animation: marquee 30s linear infinite;
+      }
+
+      /* Tạm dừng animation khi hover trên desktop */
+      .marquee-container:hover .animate-marquee {
+        animation-play-state: paused;
+      }
+
+      /* Trên mobile, tắt animation và sử dụng scroll */
+      @media (max-width: 767px) {
+        .animate-marquee {
+          animation: none;
+          transform: translateX(0);
+        }
+
+        .mobile-scroll {
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        .mobile-scroll::-webkit-scrollbar {
+          display: none;
+        }
+
+        .mobile-scroll {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      }
+
+      /* Trên desktop, ẩn scroll bar và cho phép animation */
+      @media (min-width: 768px) {
+        .desktop-marquee {
+          overflow: hidden;
+        }
       }
     </style>
 
@@ -2132,7 +2167,9 @@
 
     <footer class="py-14 bg-slate-100 border-t border-slate-100">
       <div class="max-w-screen-xl mx-auto px-5">
-        <div class="grid gallery-grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+        <div
+          class="grid gallery-grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8"
+        >
           <div class="sm:col-span-2 md:col-span-3 lg:col-span-2">
             <a href="#" class="text-lg flex items-center">
               <span class="font-bold text-indigo-600">Astro</span>
