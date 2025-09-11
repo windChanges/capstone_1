@@ -16,7 +16,7 @@
     />
     <!-- tailwin css -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-   
+
     <style>
       @keyframes marquee {
         0% {
@@ -33,42 +33,42 @@
     </style>
 
     <style>
-    /* Mặc định (mobile first) */
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-
-    /* sm: >= 640px */
-    @media (min-width: 640px) {
-      .sm\:grid-cols-2 {
-        grid-template-columns: repeat(2, 1fr);
+      /* Mặc định (mobile first) */
+      /* Mobile mặc định */
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
       }
-    }
 
-    /* md: >= 768px */
-    @media (min-width: 768px) {
-      .md\:grid-cols-3 {
-        grid-template-columns: repeat(3, 1fr);
+      /* sm >= 640px */
+      @media (min-width: 640px) {
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
       }
-    }
 
-    /* lg: >= 1024px */
-    @media (min-width: 1024px) {
-      .lg\:grid-cols-5 {
-        grid-template-columns: repeat(5, 1fr);
+      /* md >= 768px */
+      @media (min-width: 768px) {
+        .gallery-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
       }
-    }
 
-    .item {
-      background: #4f46e5;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      border-radius: 8px;
-    }
-  </style>
+      /* lg >= 1024px */
+      @media (min-width: 1024px) {
+        .gallery-grid {
+          grid-template-columns: repeat(5, 1fr);
+        }
+      }
+
+      .item {
+        background: #4f46e5;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+      }
+    </style>
     <!-- Flowbite -->
     <link
       href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
@@ -2132,7 +2132,7 @@
 
     <footer class="py-14 bg-slate-100 border-t border-slate-100">
       <div class="max-w-screen-xl mx-auto px-5">
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+        <div class="grid gallery-grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           <div class="sm:col-span-2 md:col-span-3 lg:col-span-2">
             <a href="#" class="text-lg flex items-center">
               <span class="font-bold text-indigo-600">Astro</span>
