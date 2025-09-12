@@ -4,6 +4,61 @@
   will-change: transform;
 }
 
-.grid-cols-5{
+.grid-cols-5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.parent {
+  display: grid;
+  margin-top: 4rem;
+  /* mt-16 */
+  gap: 2.5rem;
+  /* gap-10 */
+  grid-template-columns: 1fr;
+  /* mặc định 1 cột */
+}
+
+@media (min-width: 768px) {
+
+  /* md: */
+  .parent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+
+  /* lg: */
+  .parent {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.child {
+  border-radius: 1rem;
+  /* rounded-2xl */
+  padding: 2rem;
+  /* p-8 */
+  background-color: #f9fafb;
+  /* bg-gray-50 */
+  transition: all 0.2s ease-in-out;
+  /* transition-all */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  /* shadow */
+  border: 1px solid rgba(229, 231, 235, 0.5);
+  /* ring-1 ring-gray-200/50 */
+}
+
+.child:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  /* hover:shadow-lg */
+}
+
+.child.col-span-3 {
+  grid-column: span 3;
+}
+
+.child.col-span-2 {
+  grid-column: span 2;
 }
